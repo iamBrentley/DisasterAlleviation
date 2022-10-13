@@ -14,6 +14,13 @@ namespace DAF_WEBAPP_V1._0._0.Pages.DISASTER
         public DISASTER.DisasterCapture disasterCap = new DISASTER.DisasterCapture();
         public List<DISASTER.DisasterCapture> viewDisaster = new List<DISASTER.DisasterCapture>();
 
+        public DONATIONS_GOODS.DonatedGoods donatedGoods = new DONATIONS_GOODS.DonatedGoods();
+        public List<DONATIONS_GOODS.DonatedGoods> viewGoods = new List<DONATIONS_GOODS.DonatedGoods>();
+
+        public DONATIONS_MONEY.DonatedMoney donatedMoney = new DONATIONS_MONEY.DonatedMoney();
+        public List<DONATIONS_MONEY.DonatedMoney> viewMoney = new List<DONATIONS_MONEY.DonatedMoney>();
+
+
         public List<DISASTER.DisasterCapture> ViewDisaster { get; set; }
 
         public String errorMsg = "error";

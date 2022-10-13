@@ -56,7 +56,7 @@
     <br />
     <br />
     <br />
-    <h2>Disasters to Allocate</h2>
+    <h2>Disasters to Allocate to</h2>
     <br />
     <table class="table">
         <thead>
@@ -79,6 +79,58 @@
                     <td>@item.endDate</td>
                     <td>@item.location</td>
                     <td>@item.description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <h2>Goods to Allocate</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>No. of Goods</th>
+                <th>Donated by</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.viewGoods)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.date</td>
+                    <td>@item.numOfGoods</td>
+                    <td>@item.donorName</td>
+                    <td>@item.goodsDescription</td>
+                </tr> 
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <h2>Money to Allocate</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DATE</th>
+                <th>Amount</th>
+                <th>Donated by</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.viewMoney)
+            {
+                <tr>
+                    <td>@item.</td>
+                    <td>@item.date</td>
+                    <td>@item.amount</td>
+                    <td>@item.donorName</td>
                 </tr>
             }
         </tbody>
