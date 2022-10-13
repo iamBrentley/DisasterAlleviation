@@ -1,0 +1,36 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.DONATIONS_VIEW.view_donations_goodsModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Goods Donated </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<h2>Goods Donated</h2>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>No. of Goods</th>
+            <th>Donated by</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.viewGoods)
+        {
+        <tr>
+            <td>@item.date</td>
+            <td>@item.numOfGoods</td>
+            <td>@item.donorName</td>
+            <td>@item.goodsDescription</td>
+        </tr>
+        }
+    </tbody>
+</table>

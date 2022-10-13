@@ -1,0 +1,63 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.DONATIONS_GOODS.goods_donationsModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Donate Goods </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<br/>
+<h2>Donate goods to the Disaster Alleviation Foundation</h2>
+<br />
+<br />
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Date</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" name="date" value="@Model.donatedGoods.date" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Number of goods</label>
+        <div class="col-sm-4">
+            <input type="number" class="form-control" name="numGoods" value="@Model.donatedGoods.numOfGoods" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Cetegory of goods</label>
+        <div class="col-sm-1">
+            <label for="clothes">Clothes</label>
+        </div>
+        <input type="radio" id="clothes" class="col-sm-1 form-control" name="category_clothes" value="">
+        <div class="col-sm-1">
+            <label for="Non-perishableFoods">Non-perishable Foods</label>
+        </div>
+            <input type="radio" id="Non-perishableFoods" class="col-sm-1 form-control" name="category_nonPFoods" value="">  
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Donated by (optional)</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="donorName" value="@Model.donatedGoods.donorName" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Description of goods</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="description" value="@Model.donatedGoods.goodsDescription" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Donate</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+</form>
+

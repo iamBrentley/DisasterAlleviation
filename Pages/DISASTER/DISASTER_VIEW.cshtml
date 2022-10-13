@@ -1,0 +1,86 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.DISASTER.DISASTER_VIEWModel
+@{
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Disaster Allocate </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<br />
+<h2>Allocate donations to a disaster</h2>
+<br />
+<br />
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Date of Donation</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" name="donationdate" value="" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Disaster Name</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="disastername" value="" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Location of Disaster</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="locOfDisaster" value="" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Description of Allocation</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="description" value="" />
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Allocate</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <h2>Disasters to Allocate</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Disaster Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.viewDisaster)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.disasterName</td>
+                    <td>@item.startDate</td>
+                    <td>@item.endDate</td>
+                    <td>@item.location</td>
+                    <td>@item.description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

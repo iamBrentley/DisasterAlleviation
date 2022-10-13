@@ -1,0 +1,50 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.USER.authorized_userModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Authorized user signup </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<h2>Sign Up as an Authorized user</h2>
+<br />
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">First name</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="fname" value="" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Surname</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="surname" value="" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="email" value="" />
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-3">
+            <input type="password" class="form-control" name="password" value="" />
+        </div>
+    </div>
+
+  
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-2 d-grid">
+            <button type="submit" class="btn btn-primary">Sign up</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+</form>

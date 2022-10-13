@@ -1,0 +1,80 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.DISASTER.DISASTER_DONATEModel
+@{
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Disaster Donate </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<br />
+<h2>Capture a disaster to be donated to</h2>
+<br />
+<br />
+
+
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Disaster Name</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="disastername" value="@Model.disasterCapture.disasterName" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Disaster Start Date</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" name="startdate" value="@Model.disasterCapture.startDate" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Disaster End Date</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" name="enddate" value="@Model.disasterCapture.endDate" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Location of Disaster</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="locOfDisaster" value="@Model.disasterCapture.location" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Description</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="description" value="@Model.disasterCapture.description" />
+        </div>
+    </div>
+
+    @if (Model.errorMsg.Length > 0)
+    {
+        <div class='alert alert-warning alert-dismissable fade show' role="alert">
+            <strong>@Model.errorMsg</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (Model.successMsg.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class='alert alert-success alert-dismissable fade show' role="alert">
+                    <strong>@Model.errorMsg</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Capture</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+</form>
