@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-
+@*this page is for the money donations, note the form where user information will be captured*@
 <br />
 <h2>Donate Money to the Disaster Alleviation Foundation</h2>
 <br />
 <br />
 
-@if (Model.errorMsg.Length > 0)
+@if (Model.errorMsg.Length > 0)@*if statement to display an alert message *@
             {
                 <div class='alert alert-warning alert-dismissable fade show' role="alert">
                     <strong>@Model.errorMsg</strong>
@@ -23,11 +23,11 @@
                 </div>
             }
 
-<form method="POST">
+<form method="POST">@*form method indicates the method the form will execute when submit is clicked, this form is for the POST() method*@
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Date</label>
         <div class="col-sm-3">
-            <input type="date" class="form-control" name="date" value="@Model.donatedMoney.date" />
+            <input type="date" class="form-control" name="date" value="@Model.donatedMoney.date" />@*Model is almost like the class we are working with, and we use Model as an object to retreive variables we have declared in the C# class (money_donations.cshtml) of this html page, and use them as the value of this textfield in the form*@
         </div>
     </div>
     <div class="row mb-3">

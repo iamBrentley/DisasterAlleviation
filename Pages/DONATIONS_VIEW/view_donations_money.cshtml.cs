@@ -10,12 +10,15 @@ namespace DAF_WEBAPP_V1._0._0.Pages.DONATIONS_VIEW
 {
     public class view_donations_moneyModel : PageModel
     {
-        public DONATIONS_MONEY.DonatedMoney donatedMoney = new DONATIONS_MONEY.DonatedMoney();
-        public List<DONATIONS_MONEY.DonatedMoney> viewMoney = new List<DONATIONS_MONEY.DonatedMoney>();
+       
+
+
+        public DONATIONS_MONEY.DonatedMoney donatedMoney = new DONATIONS_MONEY.DonatedMoney();//constructor so we can reference the class with the user entered variables
+        public List<DONATIONS_MONEY.DonatedMoney> viewMoney = new List<DONATIONS_MONEY.DonatedMoney>();//creating a list of that referenced class 
         public String errorMsg = "error";
-        public void OnGet()
+        public void OnGet()//OnGet() methods are used for when we are trying to read data, to get data
         {
-            try
+            try//we are trying to SELECT from the database to view the information stored
             {
                 String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\user\\Documents\\DAF_DB.mdf;Integrated Security=True;Connect Timeout=30";
                 using (SqlConnection con = new SqlConnection(connectionString))

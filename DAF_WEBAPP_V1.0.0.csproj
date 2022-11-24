@@ -6,8 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\DISASTER\ACTIVE_DISASTERS.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.17.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\DISASTER\ACTIVE_DISASTERS.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\DISASTER\ACTIVE_DISASTERS.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\DISASTER\ACTIVE_DISASTERS.cshtml" />
   </ItemGroup>
 
 </Project>

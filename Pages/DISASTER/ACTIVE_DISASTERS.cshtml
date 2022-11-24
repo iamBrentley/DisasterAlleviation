@@ -1,0 +1,44 @@
+﻿@page
+@model DAF_WEBAPP_V1._0._0.Pages.DISASTER.ACTIVE_DISASTERSModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Active Disasters </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <h1>0 Active Disasters</h1>
+    <br />
+    <br />
+    <h3>Current Active Disasters Donated to</h3>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>DATE</th>
+                <th>Amount</th>
+                <th>Numner of Items</th>
+                <th>Donated by</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @*@foreach (var item in Model.viewMoney)
+            {
+                <tr>
+                    <td>@item.date</td>
+                    <td>@item.amount</td>
+                    <td>@item.donorName</td>
+                </tr>
+            }*@
+        </tbody>
+    </table>
+</body>
